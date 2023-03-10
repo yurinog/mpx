@@ -666,6 +666,7 @@
     padding-top: 1em;
     padding-bottom: 1em;
     padding-left: 0.5em;
+    height: 5em;
   }
 
   img.banner-01 {
@@ -940,20 +941,21 @@
     font-weight: 600;
   }
 
-  .footer-1 {
+  .footer-container-1 {
     background-color: #0277bd;
-    width: 100%;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
   }
 
+  .footer-container-2 {
+    background-color: #01579b;
+  }
+
   .footer-2 {
     background-color: #01579b;
-    width: 100%;
   }
 
   .footer-3 {
-    width: 100%;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
   }
