@@ -3,8 +3,13 @@
     --white: #ffffff;
   }
 
+*:not(.background-parallax){
+  transition: ease-in-out 0.2s;
+}
 
-.bg {
+
+
+  .bg {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -14,6 +19,20 @@
 
   body {
     overflow-x: hidden;
+  }
+
+  .libras-container {
+    position: fixed;
+    max-width: 95vw;
+    padding-right: var(--bs-gutter-x,.75rem);
+    right: 0;
+    top: 40%;
+    z-index: 99999999;
+  }
+
+  .libras-img {
+    width: 2.75em;
+    height: 2.75em;
   }
 
   .btn-menu-superior {
@@ -32,7 +51,20 @@
     white-space: nowrap;
     margin: 0.2em;
     cursor: pointer;
+    &:hover {
+      background-color: #0277bd;
+      color: white;
+    }
+    &:hover span {
+      color: white;
+    }
+    &:active {
+      background-color: #01579b;
+      color: white;
+    }
   }
+
+
 
   .first-logo {
     padding-right: 15em;
@@ -102,21 +134,24 @@
     align-items: center;
     padding-left: 1em;
     padding-right: 1em;
+    &:hover {
+      background-color: white;
+    }
+    &:hover > div {
+     color: #01579b;
+    }
   }
 
   .Frame-38 {
-    height: 3em;
-    flex-grow: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 7.5em;
-    padding: 0 3em;
     background-color: #0277bd;
   }
+  .menu-container {
+    width: 75%;
+    height: 3em;
+    align-items: center;
+  }
 
-  .Prefeitura {
+  .menu-item {
     cursor: pointer;
     font-family: "Inter";
     font-size: 0.75em;
@@ -127,7 +162,24 @@
     letter-spacing: normal;
     text-align: left;
     color: var(--white);
+    display: flex;
+    align-items: center;
   }
+
+  .arrow {
+    border: solid white;
+    border-width: 0 0.2em 0.2em 0;
+    display: inline-block;
+    padding: 0.2em;
+    margin-bottom: 0.1em;
+    margin-left: 0.8em;
+  }
+
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+  
 
   .vitrine-container {
     width: auto;
@@ -156,6 +208,7 @@
     cursor: pointer;
   }
 
+
   img.Btn-Esq-Sv {
     width: 48px;
     height: 48px;
@@ -177,16 +230,16 @@
   }
 
   img.Btn-Esq-Gal {
-    width: 48px;
-    height: 48px;
+    width: 2em;
+    height: 2em;
     flex-grow: 0;
     object-fit: contain;
     cursor: pointer;
   }
 
   img.Btn-Dir-Gal {
-    width: 48px;
-    height: 48px;
+    width: 2em;
+    height: 2em;
     flex-grow: 0;
     object-fit: contain;
     cursor: pointer;
@@ -233,10 +286,16 @@
     padding-left: 1em;
     padding-right: 1em;
     text-align: center;
-    
     padding-top: 1em;
     padding-bottom: 1em;
     margin: 0 1em;
+    &:hover {
+      background-color: white;
+      color: #01579b;
+    }
+    &:hover > span {
+     color: #01579b;
+    }
   }
 
 
@@ -270,10 +329,6 @@
 
   .sv-btns {
     position: absolute;
-    bottom: 1.55em;
-    left: 50%;
-    width: 84%;
-    transform: translateX(-50%);
     display: flex;
     justify-content: space-between;
 }
@@ -283,16 +338,13 @@
 }
 
   .Layout---Processo-Seletivo-MPX-Brasil {
-    width: 97%;
     margin: 0 auto;
     background-color: #fafafa;
   }
 
   .Notcias {
-    width: 129px;
-    height: 39px;
     font-family: Inter;
-    font-size: 32px;
+    font-size: 1.8em;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
@@ -300,7 +352,9 @@
     letter-spacing: normal;
     text-align: left;
     color: #01579b;
-    padding-left: 5.2em;
+    margin-left: 3em;
+    padding-bottom: 1em;
+
   }
 
   .Notcias-inside {
@@ -316,7 +370,14 @@
     padding-left: 2px;
     margin-right: 2em;
     margin-left: 2em;
+    &:hover span{
+      color: #01579b;
+    }
+    &:hover img {
+      scale: 1.01;
+    }
   }
+
   img.foto-center {
     object-fit: contain;
     width: 100%;
@@ -337,7 +398,8 @@
     width: 90%;
     height: 2em;
     flex-grow: 0;
-    padding-bottom: 4em;
+    padding-top: 1em;
+    padding-bottom: 3.3em;
     font-family: Inter;
     font-size: 1em;
     font-weight: 600;
@@ -382,7 +444,48 @@
 
   .Notcia{
     margin: 0 1em;
+    z-index: 999!important;
+    &:hover {
+      background-color: #FFC107;
+    }
   }
+
+  .Notcia * {
+    z-index: 999!important;
+  }
+
+  .menu-item-wrapper {
+    cursor: pointer;
+    &:hover {
+    background-color: white;
+    }
+    &:hover span {
+      color: #01579b;
+    }
+    &:active {
+      background-color: white;
+    }
+    &:active span {
+      color: #01579b;
+    }
+    &:hover .arrow {
+      border: solid #01579b;
+      border-width: 0 0.2em 0.2em 0;
+      display: inline-block;
+      padding: 0.2em;
+      margin-bottom: 0.1em;
+      margin-left: 0.8em;
+    }
+    &:active .arrow {
+      border: solid #01579b;
+      border-width: 0 0.2em 0.2em 0;
+      display: inline-block;
+      padding: 0.2em;
+      margin-bottom: 0.1em;
+      margin-left: 0.8em;
+    }
+  }
+  
 
   .image-slider-noticias img{
     width: 100%;
@@ -434,21 +537,14 @@
 
   .arrow-noticias {
     position: absolute;
-    top: 78em;
-    left: 50%;
-    width: 75.5%;
-    transform: translateX(-50%);
+    cursor: pointer;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
-    cursor: pointer;
 }
 
   .arrow-galerias {
       position: absolute;
-      top: 123em;
-      left: 50%;
-      width: 90%;
-      transform: translateX(-50%);
       display: flex;
       justify-content: space-between;
       cursor: pointer;
@@ -456,8 +552,8 @@
 
   .Galeria-text {
     flex-grow: 0;
-    margin: 0 0 0 1px;
     font-family: Inter;
+    padding-top: 1em;
     font-size: 2em;
     font-weight: bold;
     font-stretch: normal;
@@ -479,10 +575,12 @@
   .slider__item {
     padding-left: 1.5em;
     padding-right: 1.5em;
+    height: 13em!important;
   }
   .slider__item > img {
     transform: scale(0.8, 0.8);
     width: 100%;
+    object-fit: cover;
   }
 
 
@@ -562,27 +660,16 @@
   }
 
   img.banner-01 {
-    width: 558px;
-    height: 160px;
-    flex-grow: 0;
-    margin: 0 30px 0 0;
     object-fit: contain;
   }
 
   img.banner-02 {
-    width: 558px;
-    height: 160px;
-    flex-grow: 0;
-    margin: 0 0 0 30px;
     object-fit: contain;
   }
 
   .Rectangle-47 {
     width: 100%;
-    height: 30em;
-    flex-grow: 0;
     margin: 32px 0;
-    padding: 48px 0;
     border-radius: 16px;
     background-color: #01579b;
   }
@@ -602,8 +689,6 @@
   }
 
   .bg-eventos-container {
-    flex-grow: 0;
-    padding: 1em;
     border-radius: 24px;
     border: solid 1px #eee;
     background-color: var(--white);
@@ -611,8 +696,20 @@
 
   .bg-eventos-1-container {
     background-color: var(--white);
-    width: 23%;
     padding: 2em;
+  }
+
+  .bg-eventos-1-container > div {
+    cursor: pointer;
+    &:hover {
+      background-color: #FFC107;
+    }
+    &:active span{
+      color: black;
+    }
+    &:active {
+      background-color: #FFC107;
+    }
   }
 
   .de-dezembro-2020 {
@@ -736,6 +833,12 @@
     border-radius: 24px;
     border: solid 1px #eee;
     background-color: var(--white);
+    &:hover span{
+      color: #01579b;
+    }
+    &:hover img {
+      scale: 1.01;
+    }
   }
 
   .Vector-video {
@@ -749,7 +852,7 @@
   }
 
   .background-parallax {
-    background-image: url("img/image-8.jpg");
+    background-image: url("img/image-9.jpg");
     width: 100%;
     height: 0;
     border-radius: 12px;
@@ -846,14 +949,16 @@
     border-bottom-right-radius: 12px;
   }
 
+  .Horrio-de-Atendimento, .Segunda-Sexta-07h-s-11h-e-das-13h-s-17h {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   .sinop {
     width: 100%;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
-  }
-
-  .footer-2 > div {
-    width: 15%;
   }
 
   .Ano---Nome-do-cliente---Todos-os-direitos-reserva {
@@ -965,10 +1070,6 @@
 
   .slick-slider-btns {
     position: absolute;
-    bottom: 39%;
-    left: 50%;
-    width: 90%;
-    transform: translateX(-50%);
     display: flex;
     justify-content: space-between;
 }
