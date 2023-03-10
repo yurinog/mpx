@@ -23,10 +23,10 @@
 </head>
 <body>
     <!-- layout principal -->
-    <div class="site-container w-100">
+    <div class="site-container container-fluid">
     <div class="Layout---Processo-Seletivo-MPX-Brasil">
         <!-- div to topo menu superior -->
-        <div class="bg d-flex flex-row py-2">
+        <div class="d-none bg d-md-flex flex-row py-2 ">
 
             <div class="btn-menu-superior">
                 <span class="Aumentar-fonte">
@@ -63,29 +63,37 @@
                     Pesquise no Site
                 </span>
             </div>
-
         </div>
+
+        <!-- Acessibilidade Libras -->
+        <div class="libras-container">
+            <div class="libras">
+                <img src="img/libras-4.png"
+                class="libras-img">
+             </div>
+        </div>
+
         <!-- header fundo azul -->
-        <div class="header-bg d-flex flex-row w-100">
-            <div class="d-flex flex-row w-100 justify-content-between">
-                <div class="first-logo d-flex flex-row">
+        <div class="header-bg d-flex flex-row w-100 justify-content-center">
+            <div class="row d-flex justify-content-between col-md-8">
+                <div class="col-md-3 first-logo d-flex flex-row">
                     <img src="img/ouvidoria.svg"
                     class="Ouvidoria">
                 </div>
-                <div class="links-rap-container d-flex flex-row w-75 justify-content-between">
-                    <div class="links-rap">
+                <div class="col-md-5 d-none d-md-flex  flex-row w-75 justify-content-end">
+                    <div class="links-rap col-md-3 me-2 links-rap">
                         <img src="img/ouv.svg"
                         class="ouv">
                         <div class="Ouvidoria-e-SIC">Ouvidoria e-SIC</div>
                         
                     </div>
-                    <div class="links-rap">
+                    <div class="links-rap col-md-3 me-2  links-rap">
                         <img src="img/transp.svg"
                         class="transp">
                         <div class="Ouvidoria-e-SIC">Portal Transparencia</div>
                     </div>
                     
-                    <div class="links-rap">
+                    <div class="links-rap col-md-3 me-2  links-rap">
                         <img src="img/cart.svg"
                         class="cart">
                         <div class="Ouvidoria-e-SIC">Carta de Serviço ao Cidadão</div>
@@ -99,25 +107,44 @@
         
 
         <!-- menu navegação superior -->
-        <div class="Frame-38 w-100 d-flex justify-content-center">
-            <span class="Prefeitura">
-                Prefeitura
-            </span>
-            <span class="Prefeitura">
-                Município
-            </span>
-            <span class="Prefeitura">
-                Secretarias
-            </span>
-            <span class="Prefeitura">
-                Notícias
-            </span>
-            <span class="Prefeitura">
-                Imprensa
-            </span>
-            <span class="Prefeitura">
-                Contato
-            </span>
+        <div class="Frame-38 d-none d-md-flex w-100 justify-content-center">
+            <div class="row menu-container justify-content-between">
+            <div class="col-md-2 menu-item-wrapper h-100 d-flex align-items-center justify-content-center">
+                <span class="menu-item">
+                    Prefeitura <i class="arrow down"></i>
+                </span>
+            </div>
+            
+            <div class="col-md-2 menu-item-wrapper h-100 d-flex align-items-center justify-content-center">
+                <span class="menu-item">
+                    Município <i class="arrow down"></i>
+                </span>
+            </div>
+            <div class="col-md-2 menu-item-wrapper h-100 d-flex align-items-center justify-content-center">
+                <span class="menu-item">
+                    Secretarias <i class="arrow down"></i>
+                </span>
+            </div>
+            
+            <div class="col-md-2 menu-item-wrapper h-100 d-flex align-items-center justify-content-center">
+                <span class="menu-item">
+                    Notícias
+                </span>
+            </div>
+            
+            <div class="col-md-2 menu-item-wrapper h-100 d-flex align-items-center justify-content-center">
+                <span class="menu-item">
+                    Imprensa
+                </span>
+            </div>
+            
+            <div class="col-md-2 menu-item-wrapper h-100 d-flex align-items-center justify-content-center">
+                <span class="menu-item">
+                    Contato
+                </span>
+            </div>
+        </div>
+            
         </div>
 
         <!-- imagem vitrine slider -->
@@ -125,7 +152,7 @@
             
             <div class="vitrine-container">
                 <div class="img-slick-1">
-                    <img src="img/Vitrine.jpg"
+                    <img src="img/vitrine.jpg"
                     srcset="img/vitrine@2x.jpg 2x,
                             img/vitrine@3x.jpg 3x"
                     class="Vitrine"
@@ -151,10 +178,10 @@
             <div class="slick-slider-dots"></div>
             
             <div class="slick-slider-btns">
-                <img src="img/btn-esq.svg"
+                <img src="img/btn-Esq.svg"
                 class="Btn-Esq">
 
-                <img src="img/btn-dir.svg"
+                <img src="img/btn-Dir.svg"
                 class="Btn-Dir">
             </div>
             
@@ -162,7 +189,7 @@
         
 
         <!-- servicos slider -->
-        <div class="servicos-container">
+        <div class="servicos-container d-none d-md-flex">
             <div class="servicos">
 
                 <div class="sv-slider">
@@ -209,9 +236,9 @@
                 </div>
                 
                 <div class="sv-btns">
-                    <img src="img/btn-esq.svg"
+                    <img src="img/btn-Esq.svg"
                     class="Btn-Esq-Sv">
-                    <img src="img/btn-dir.svg"
+                    <img src="img/btn-Dir.svg"
                     class="Btn-Dir-Sv">
                 </div>
             </div>
@@ -221,12 +248,13 @@
         <!-- notícias -->
 
         <div class="container-noticias d-flex flex-column pt-5 pb-3 justify-content-center">
-            <span class="Notcias Text-Style-3 w-100 text-align-left">
-                Notícias
-            </span>
+            
 
-            <div class="Notcias-inside d-flex flex-row py-5 justify-content-center align-items-center w-100">
-                <div class="Notcias-center pb-3 d-flex flex-column justify-content-center align-items-center">
+            <div class="row g-0 Notcias-inside d-flex flex-row justify-content-center align-items-center w-100">
+                <span class="Notcias Text-Style-3 w-100 text-align-left col-md-12">
+                    Notícias
+                </span>
+                <div class="col-md-5 col-sm-12 xs-12 Notcias-center pb-3 d-flex flex-column justify-content-center align-items-center">
                     <img src="img/foto-center-1.svg"
                             class="foto-center">
                     <span class="slider-text">
@@ -234,7 +262,7 @@
                     </span>
                 </div>
 
-                <div class="Notcias-center pb-3 d-flex flex-column justify-content-center align-items-center">
+                <div class="col-md-5 col-sm-12 xs-12 Notcias-center pb-3 d-flex flex-column justify-content-center align-items-center">
                     <img src="img/foto-center-2.svg"
                     class="foto-center">
 
@@ -242,14 +270,11 @@
                         O aplicativo de meditação Calm está tendo seu próprio programa HBO Max cheio de celebridades
                     </span>
                 </div>
-                
-        
-                
-            </div>
+             </div>
         </div>
 
-        <div class="tittle-bg ">
-            <div class="tittle-container d-flex justify-content-center">
+        <div class="tittle-bg">
+            <div class="tittle-container d-none d-md-flex justify-content-center">
                 <div class="slider-noticias">
                     <div class="Notcia">
                         <div class="image-slider-noticias">
@@ -299,10 +324,10 @@
                     </div>
                 </div>
     
-                <div class="arrow-noticias">
-                    <img src="img/btn-esq.svg"
+                <div class="arrow-noticias d-none d-md-flex">
+                    <img src="img/btn-Esq.svg"
                             class="Btn-Esq-Not">
-                            <img src="img/btn-dir.svg"
+                            <img src="img/btn-Dir.svg"
                             class="Btn-Dir-Not">
                 </div>
 
@@ -320,13 +345,17 @@
             </a>
         </div>
 
-        <div class="banner-container d-flex justify-content-center">
-            
-                <img src="img/banner-01.svg"
-                class="banner-01">
+        <div class="row banner-container d-flex justify-content-center">
+                <div class="col-md-5 my-2 mx-1 d-flex justify-content-center">
+                    <img src="img/banner-01.svg"
+                    class="banner-01">
+                </div>
+                <div class="col-md-5 my-2 mx-1 d-flex justify-content-center">
+                    <img src="img/banner-02.svg"
+                     class="banner-02">
+                </div>
 
-                <img src="img/banner-02.svg"
-                class="banner-02">
+                
         </div>
 
         
@@ -334,7 +363,7 @@
             <span class="Galeria-text Text-Style-3 w-100 text-align-left">
                 Galeria de fotos
             </span>
-            <div class="galeria-slider px-4 py-4 my-2"> 
+            <div class="galeria-slider row px-4 py-4 my-2"> 
                 <div class="slider__item">
                     <img src="img/dir-2.svg" 
                     class="dir-1 h-100">
@@ -346,7 +375,7 @@
                 </div>
     
                 <div class="slider__item">
-                    <img src="img/dir-2.svg" 
+                    <img src="img/vitrine.jpg" 
                     class="dir-2 h-100">
                 </div>
 
@@ -357,10 +386,10 @@
                 
             </div>
 
-            <div class="arrow-galerias">
-                <img src="img/btn-esq.svg"
+            <div class="arrow-galerias d-none d-md-flex">
+                <img src="img/btn-Esq.svg"
                         class="Btn-Esq-Gal">
-                        <img src="img/btn-dir.svg"
+                        <img src="img/btn-Dir.svg"
                         class="Btn-Dir-Gal">
             </div>
 
@@ -375,14 +404,15 @@
             </div>
         </div>
 
+        <div class="row">
+            <span class="Calendrio-de-Eventos Text-Style-3 col-md-4">
+                Calendário de Eventos
+            </span>
+        </div>
 
-        <span class="Calendrio-de-Eventos Text-Style-3 ps-5">
-            Calendário de Eventos
-        </span>
-
-        <div class="Agendas py-4"> 
-            <div class="bg-eventos-container d-flex flex-row flex-no-wrap align-items-center justify-content-center w-100">
-                <div class="bg-eventos-1-container">
+        <div class="Agendas py-4 d-flex justify-content-center"> 
+            <div class="row bg-eventos-container  justify-content-center w-100">
+                <div class="col-md-3 col-sm-8 bg-eventos-1-container">
                     <div class="text d-flex flex-column">
                         <div class="d-inline">
                             <span class="Text-Style-3 d-inline">
@@ -414,7 +444,7 @@
                 </div>
                 </div>
 
-                <div class="bg-eventos-1-container">
+                <div class="col-md-3 col-sm-8 bg-eventos-1-container">
                     <div class="text d-flex flex-column">
                         <div class="d-inline">
                             <span class="Text-Style-3 d-inline">
@@ -446,7 +476,7 @@
                     </div>
                 </div>
 
-                <div class="bg-eventos-1-container">
+                <div class="col-md-3 col-sm-8 bg-eventos-1-container">
                     <div class="text d-flex flex-column">
                         <div class="d-inline">
                             <span class="Text-Style-3 d-inline">
@@ -460,57 +490,55 @@
                         <span class="A-partir-das-1630">
                             A partir das 16:30
                         </span>
-                    </div>
-
-                    <div class="d-flex flex-column">
-                        <img src="img/agenda-3.jpg"
-                        srcset="img/agenda-1@2x.jpg 2x,
-                                img/agenda-1@3x.jpg 3x"
-                        class="agenda-1">
-
-                        <span class="ttulo">
-                            Como um artista visual redefine o sucesso 
-                        </span>
-
-                        <span class="Rua-das-azaleias-257---Jardim-Botnico---SinopMT">
-                            Rua das azaleias, 257 - Jardim Botânico - Sinop/MT
-                        </span>
-                    </div>
-
-                    </div>
-                <div class="bg-eventos-1-container">
-                    <div class="text d-flex flex-column">
-                        <div class="d-inline">
-                            <span class="Text-Style-3 d-inline">
-                                13
-                            </span>
-                            <span class="de-dezembro-2020 d-inline">
-                                de dezembro 2020
-                            </span>
-                        </div>
-
-                        <span class="A-partir-das-1630">
-                            A partir das 16:30
-                        </span>
-                        </div>
 
                         <div class="d-flex flex-column">
-                        <img src="img/agenda-4.jpg"
-                        srcset="img/agenda-1@2x.jpg 2x,
-                                img/agenda-1@3x.jpg 3x"
-                        class="agenda-1">
+                            <img src="img/agenda-3.jpg"
+                            srcset="img/agenda-1@2x.jpg 2x,
+                                    img/agenda-1@3x.jpg 3x"
+                            class="agenda-1">
 
-                        <span class="ttulo">
-                            Comece um blog para atingir seu pico criativo
-                        </span>
+                            <span class="ttulo">
+                                Como um artista visual redefine o sucesso 
+                            </span>
 
-                        <span class="Rua-das-azaleias-257---Jardim-Botnico---SinopMT">
-                            Rua das azaleias, 257 - Jardim Botânico - Sinop/MT
-                        </span>
-                    </div>
-
+                            <span class="Rua-das-azaleias-257---Jardim-Botnico---SinopMT">
+                                Rua das azaleias, 257 - Jardim Botânico - Sinop/MT
+                            </span>
+                        </div>
                     </div>
                 </div>
+                <div class="col-md-3 col-sm-8 bg-eventos-1-container">
+                    <div class="text d-flex flex-column">
+                        <div class="d-inline">
+                            <span class="Text-Style-3 d-inline">
+                                13
+                            </span>
+                            <span class="de-dezembro-2020 d-inline">
+                                de dezembro 2020
+                            </span>
+                        </div>
+
+                        <span class="A-partir-das-1630">
+                            A partir das 16:30
+                        </span>
+
+                        <div class="d-flex flex-column">
+                            <img src="img/agenda-4.jpg"
+                            srcset="img/agenda-1@2x.jpg 2x,
+                                    img/agenda-1@3x.jpg 3x"
+                            class="agenda-1">
+
+                            <span class="ttulo">
+                                Comece um blog para atingir seu pico criativo
+                            </span>
+
+                            <span class="Rua-das-azaleias-257---Jardim-Botnico---SinopMT">
+                                Rua das azaleias, 257 - Jardim Botânico - Sinop/MT
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
                </div> 
                
                <div class="d-flex justify-content-center pt-1">
@@ -522,13 +550,14 @@
                         </div>
                     </a>
                 </div>
+        </div>
         
 
         <div class="videos-container p-4">
 
-            <div class="video-obras-container-1 d-flex flex-row justify-content-center">
+            <div class="row py-3 video-obras-container-1 d-flex flex-row justify-content-center">
 
-                <div class="video-container-1 d-flex flex-column px-3">
+                <div class="col-md-5 col-sm-12 video-container-1 d-flex flex-column px-3">
                     
                     <div class="Galeria-de-Vdeos Text-Style-3 w-100 py-1">
                         Galeria de Vídeos
@@ -549,7 +578,7 @@
                 </div>
 
                 
-                <div class="obras-container-1 d-flex flex-column px-3">
+                <div class="col-md-5 col-sm-12 obras-container-1 d-flex flex-column px-3">
                     <span class="Galeria-de-Obras Text-Style-3 w-100 py-1">
                         Galeria de Obras
                       </span>
@@ -575,7 +604,7 @@
 
         <div class="my-parallax-window">
         <div class="my-parallax-slider d-flex justify-content-center">
-            <div class="background-parallax" data-enllax-ratio=".4" data-enllax-type="background" > </div>
+            <div class="background-parallax" data-enllax-ratio=".5" data-enllax-type="background" > </div>
             <div class="conheca-melhor d-flex flex-column justify-content-center align-items-center"> 
                 <div> 
                     <span class="Conhea-a-Melhor-Cidade-do-Brasil py-2">
@@ -599,82 +628,86 @@
 
 
         <div class="footer-container-1 w-100 d-flex justify-content-center pt-5">
-            <div class="footer-1 d-flex flex-row justify-content-center">
-                <div class="p-2">
-                    <div class="Horrio-de-Atendimento p-2">Horário de Atendimento</div>
-                    <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2">Segunda à Sexta, 07h às 11h e das 13h às 17h</div>
-                </div>
-        
-                <div class="p-2">
-                    <div class="Horrio-de-Atendimento p-2">Endereço</div>
-                    <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> Rua das azaleias, 257 - Jardim Botânico - Sinop/MT</div>
-                
-                </div>
-
-                <div class="p-2">
-                    <div class="Horrio-de-Atendimento p-2">Fale com a Prefeitura</div>
-                    <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h px-2 pt-2"> (66) 3535-3535
+            <div class="footer-1 d-flex align-items-center justify-content-center">
+                <div class="row w-100 pt-3 d-flex justify-content-center">
+                    <div class="col-md-3 p-2">
+                        <div class=" Horrio-de-Atendimento p-2">Horário de Atendimento</div>
+                        <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2">Segunda à Sexta, 07h às 11h e das 13h às 17h</div>
                     </div>
-                    <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2">
-                        (66) 9999-9999</div>
-                
+            
+                    <div class="col-md-3 p-2">
+                        <div class="Horrio-de-Atendimento p-2">Endereço</div>
+                        <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> Rua das azaleias, 257 - Jardim Botânico - Sinop/MT</div>
+                    
+                    </div>
+
+                    <div class="col-md-3 p-2 ">
+                        <div class="Horrio-de-Atendimento p-2">Fale com a Prefeitura</div>
+                        <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h px-2 pt-2"> (66) 3535-3535
+                        </div>
+                        <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2">
+                            (66) 9999-9999</div>
+                    
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="footer-container-2 w-100 d-flex justify-content-center">
             <div class="footer-2 d-flex flex-row justify-content-center">
-                <div class="flex flex-column">
-                    <div class="p-2">
-                        <div class="Horrio-de-Atendimento p-2">Contato</div>
-                        <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2">Notícias</div>
-                        <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2">Agenda da Cidade</div>
-                        <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2">Galeria de Fotos</div>
-                        <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2">Galeria de Vídeos</div>
+                <div class="row w-100 pt-3 d-flex justify-content-center">
+                    <div class="col-md-2 flex flex-column p-2">
+                        <div class="">
+                            <div class="col-md-12 Horrio-de-Atendimento p-2">Imprensa</div>
+                            <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2">Notícias</div>
+                            <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2">Agenda da Cidade</div>
+                            <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2">Galeria de Fotos</div>
+                            <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2">Galeria de Vídeos</div>
+                        </div>
+
+                        <div class="">
+                            <div class="Horrio-de-Atendimento p-2">Contato</div>
+                            <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2">Ouvidoria E-SIC</div>
+                            <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2">Telefones Uteis</div>
+                        </div>
+                    </div>
+            
+                    <div class="col-md-2 p-2">
+                        <div class="Horrio-de-Atendimento p-2">Prefeitura</div>
+                        <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> Equipe do Governo </div>
+                        <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> Fotos da Prefeitura </div>
+                        <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> Galeria de Prefeitos  </div>
+                        <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> Conheça Nosso Prefeito </div>
+                        <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> Conheça Nosso Vice-Prefeito </div>
+                        <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> Competência, Estrutura e Organizacional </div>
+                    
                     </div>
 
-                    <div class="p-2">
-                        <div class="Horrio-de-Atendimento p-2">Imprensa</div>
-                        <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2">Ouvidoria E-SIC</div>
-                        <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2">Telefones Uteis</div>
+                    <div class="col-md-2 p-2">
+                        <div class="Horrio-de-Atendimento p-2">Municípios</div>
+                        <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> Economia </div>
+                        <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> Símbolos </div>
+                        <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> Como Chegar </div>
+                        <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> Galeria de Obras </div>
+                        <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> História do Município </div>
+                        <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> Hino, Bandeira e Brasão </div>
+                        <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> Conheça Nosso Município </div>
+                    
                     </div>
-                </div>
-        
-                <div class="p-2">
-                    <div class="Horrio-de-Atendimento p-2">Prefeitura</div>
-                    <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> Equipe do Governo </div>
-                    <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> Fotos da Prefeitura </div>
-                    <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> Galeria de Prefeitos  </div>
-                    <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> Conheça Nosso Prefeito </div>
-                    <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> Conheça Nosso Vice-Prefeito </div>
-                    <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> Competência, Estrutura e Organizacional </div>
-                
-                </div>
 
-                <div class="p-2">
-                    <div class="Horrio-de-Atendimento p-2">Municípios</div>
-                    <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> Economia </div>
-                    <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> Símbolos </div>
-                    <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> Como Chegar </div>
-                    <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> Galeria de Obras </div>
-                    <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> História do Município </div>
-                    <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> Hino, Bandeira e Brasão </div>
-                    <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> Conheça Nosso Município </div>
-                
-                </div>
-
-                <div class="p-2 ">
-                    <div class="Horrio-de-Atendimento p-2">Secretarias</div>
-                    <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> Admnistração </div>
-                    <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> Agricultura e Desenvolvimento Economico Sustentável </div>
-                    <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> Assistencia Social </div>
-                    <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> Educação </div>
-                    <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> Esportes </div>
-                    <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> Finanças </div>
-                    <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> Infraestrutura </div>
-                    <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> Meio Ambiente, Turismo e Cultura </div>
-                    <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> Planejamento, Tecnologia e Informática </div>
-                    <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> Saúde </div>
+                    <div class="col-md-3 p-2 ">
+                        <div class="Horrio-de-Atendimento p-2">Secretarias</div>
+                        <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> Admnistração </div>
+                        <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> Agricultura e Desenvolvimento Economico Sustentável </div>
+                        <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> Assistencia Social </div>
+                        <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> Educação </div>
+                        <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> Esportes </div>
+                        <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> Finanças </div>
+                        <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> Infraestrutura </div>
+                        <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> Meio Ambiente, Turismo e Cultura </div>
+                        <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> Planejamento, Tecnologia e Informática </div>
+                        <div class="Segunda-Sexta-07h-s-11h-e-das-13h-s-17h p-2"> Saúde </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -704,9 +737,12 @@
             //console.log(bgHeight);
             //$('.conheca-melhor').height(bgHeight.top);
         </script>
+        
 
     </div>
 </div>
+
+
     <script type="text/javascript">
         var q = $.noConflict();
         q(document).ready(function(){
@@ -753,6 +789,62 @@
         
         q(window).enllax();
     </script>
+
+<script type="text/javascript">
+    (function($) {
+        function repositionBtns() {
+            let vitrineHeight = $('.vitrine-container-w-btn').innerHeight();
+            let vitrineWidth = $('.vitrine-container-w-btn').width();
+            let vitrineOffset = $('.vitrine-container-w-btn').offset();
+            let vitTop = vitrineOffset.top;
+            let vitLeft = vitrineOffset.left;
+
+            $(".slick-slider-btns").offset({top: vitTop+vitrineHeight/2-24, left: vitLeft+48});
+            $(".slick-slider-btns").width(vitrineWidth-96);
+            //
+            let dotsWidth = $(".slick-dots").width();
+
+            $(".slick-dots").offset({top: vitTop+vitrineHeight-48, left: vitrineWidth/2-dotsWidth/2+vitLeft});
+            //
+            let svHeight = $('.sv-slider').innerHeight();
+            let svWidth = $('.sv-slider').width();
+            let svOffset = $('.sv-slider').offset();
+
+            $(".sv-btns").offset({top: svOffset.top+svHeight/2-35, left: svOffset.left-48});
+            $(".sv-btns").width(svWidth+100);
+            //
+            let notHeight = $('.tittle-container ').innerHeight();
+            let notWidth = $('.slider-noticias').width();
+            let notOffset = $('.slider-noticias').offset();
+
+            $(".arrow-noticias").offset({top: notOffset.top+notHeight/2-90, left: notOffset.left-17.3});
+            $(".arrow-noticias").width(notWidth+35);
+            //
+            let galHeight = $('.galeria-slider').innerHeight();
+            let galWidth = $('.galeria-slider').width();
+            let galOffset = $('.galeria-slider').offset();
+
+            $(".arrow-galerias").offset({top: galOffset.top+galHeight/2-10, left: galOffset.left+75});
+            $(".arrow-galerias").width(galWidth-100);
+        }
+
+        $(document).ready(function () {
+            repositionBtns();
+        });
+
+        
+
+        $(window).on('resize', function() {
+            setTimeout(function() {
+                repositionBtns();
+            }, 350);
+        });
+        
+
+    })(jQuery);
+    
+    
+</script>
 
 
 </body>
