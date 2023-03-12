@@ -3,7 +3,7 @@
     --white: #ffffff;
   }
 
-*:not(.background-parallax){
+*:not(.background-parallax, .nav-links ul){
   transition: ease-in-out 0.2s;
 }
 
@@ -35,46 +35,35 @@
     height: 2.75em;
   }
 
-  .btn-menu-superior {
+  .nav-acessibilidade .nav-item {
     border-radius: 12px;
     border: solid 1px #eee;
-    background-color: #fafafa;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-top: 0.3em;
-    padding-bottom: 0.3em;
-    padding-left: 1.7em;
-    padding-right: 1.7em;
-    white-space: nowrap;
-    margin: 0.2em;
     cursor: pointer;
+    color: white;
     &:hover {
       background-color: #0277bd;
       color: white;
     }
-    &:hover span {
-      color: white;
-    }
+   
     &:active {
       background-color: #01579b;
-      color: white;
+      color: white!important;
     }
+
+    &:hover a {
+      color: white!important;
+    }
+    &:active a {
+      color: white!important;
+    }
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+    margin: .3rem;
   }
 
-
-
-  .first-logo {
-    padding-right: 15em;
-    padding-left: 12em;
-  }
-
-  .Aumentar-fonte {
+  .nav-acessibilidade .nav-item a {
     font-family: Inter;
     white-space: nowrap;
-    font-size: 0.7em;
     font-weight: 600;
     font-stretch: normal;
     font-style: normal;
@@ -82,7 +71,18 @@
     letter-spacing: normal;
     text-align: left;
     color: #000;
-    display: inline-flex;
+    font-size: .7rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    text-align: center;
+    max-height: 34px;
+    
+  }
+
+
+  .first-logo {
+    padding-right: 15em;
+    padding-left: 12em;
   }
 
   .header-bg {
@@ -145,26 +145,6 @@
   .Frame-38 {
     background-color: #0277bd;
   }
-  .menu-container {
-    width: 75%;
-    height: 3em;
-    align-items: center;
-  }
-
-  .menu-item {
-    cursor: pointer;
-    font-family: "Inter";
-    font-size: 0.75em;
-    font-weight: 600;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: left;
-    color: var(--white);
-    display: flex;
-    align-items: center;
-  }
 
   .arrow {
     border: solid white;
@@ -172,12 +152,28 @@
     display: inline-block;
     padding: 0.2em;
     margin-bottom: 0.1em;
-    margin-left: 0.8em;
+    margin-left: 0.3em;
   }
 
   .down {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
+  }
+
+  .mobile-menu {
+    background-color: #0277bd;
+    color: white;
+    box-shadow: 1px -11px 20px -6px rgb(0 0 0 / 49%);
+    padding-left: 0px;
+    padding-right: 0px;
+    z-index: 1;
+    position: fixed;
+    border-top-left-radius: .3em;
+    border-top-right-radius: .3em;
+    left: 0;
+    bottom: 0;
+    font-family: Inter;
+    font-size: .8em;
   }
   
 
@@ -463,19 +459,19 @@
     z-index: 999!important;
   }
 
-  .menu-item-wrapper {
-    cursor: pointer;
+  .nav-links {
+    position: relative;
+  }
+
+  .nav-links a {
+    
+    color: white;
     &:hover {
-    background-color: white;
-    }
-    &:hover span {
-      color: #01579b;
-    }
-    &:active {
       background-color: white;
+      color: #0277bd;
     }
-    &:active span {
-      color: #01579b;
+    &:not(:hover) {
+      color:white;
     }
     &:hover .arrow {
       border: solid #01579b;
@@ -483,7 +479,7 @@
       display: inline-block;
       padding: 0.2em;
       margin-bottom: 0.1em;
-      margin-left: 0.8em;
+      margin-left: 0.3em;
     }
     &:active .arrow {
       border: solid #01579b;
@@ -491,9 +487,41 @@
       display: inline-block;
       padding: 0.2em;
       margin-bottom: 0.1em;
-      margin-left: 0.8em;
+      margin-left: 0.3em;
+      
     }
   }
+
+  .nav-link {
+    font-family: "Inter";
+    font-size: 0.75em!important;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--white);
+  }
+
+  .dropdown-menu {
+    position: absolute!important;
+    border: none !important;
+    border-top: 1px solid white !important;
+    border-radius: 0!important;
+    top: 100%!important;
+    transform: none!important;
+    background-color: #0277bd!important;
+    font-family: "Inter";
+    font-size: 0.9em!important;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    width: 100%;
+  }
+
+
   
 
   .image-slider-noticias img{

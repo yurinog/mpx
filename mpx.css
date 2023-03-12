@@ -3,7 +3,7 @@
   --white: #ffffff;
 }
 
-*:not(.background-parallax) {
+*:not(.background-parallax, .nav-links ul) {
   transition: ease-in-out 0.2s;
 }
 
@@ -33,44 +33,33 @@ body {
   height: 2.75em;
 }
 
-.btn-menu-superior {
+.nav-acessibilidade .nav-item {
   border-radius: 12px;
   border: solid 1px #eee;
-  background-color: #fafafa;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding-top: 0.3em;
-  padding-bottom: 0.3em;
-  padding-left: 1.7em;
-  padding-right: 1.7em;
-  white-space: nowrap;
-  margin: 0.2em;
   cursor: pointer;
+  color: white;
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+  margin: 0.3rem;
 }
-.btn-menu-superior:hover {
+.nav-acessibilidade .nav-item:hover {
   background-color: #0277bd;
   color: white;
 }
-.btn-menu-superior:hover span {
-  color: white;
-}
-.btn-menu-superior:active {
+.nav-acessibilidade .nav-item:active {
   background-color: #01579b;
-  color: white;
+  color: white !important;
+}
+.nav-acessibilidade .nav-item:hover a {
+  color: white !important;
+}
+.nav-acessibilidade .nav-item:active a {
+  color: white !important;
 }
 
-.first-logo {
-  padding-right: 15em;
-  padding-left: 12em;
-}
-
-.Aumentar-fonte {
+.nav-acessibilidade .nav-item a {
   font-family: Inter;
   white-space: nowrap;
-  font-size: 0.7em;
   font-weight: 600;
   font-stretch: normal;
   font-style: normal;
@@ -78,7 +67,16 @@ body {
   letter-spacing: normal;
   text-align: left;
   color: #000;
-  display: inline-flex;
+  font-size: 0.7rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  text-align: center;
+  max-height: 34px;
+}
+
+.first-logo {
+  padding-right: 15em;
+  padding-left: 12em;
 }
 
 .header-bg {
@@ -141,39 +139,34 @@ img.Ouvidoria {
   background-color: #0277bd;
 }
 
-.menu-container {
-  width: 75%;
-  height: 3em;
-  align-items: center;
-}
-
-.menu-item {
-  cursor: pointer;
-  font-family: "Inter";
-  font-size: 0.75em;
-  font-weight: 600;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: left;
-  color: var(--white);
-  display: flex;
-  align-items: center;
-}
-
 .arrow {
   border: solid white;
   border-width: 0 0.2em 0.2em 0;
   display: inline-block;
   padding: 0.2em;
   margin-bottom: 0.1em;
-  margin-left: 0.8em;
+  margin-left: 0.3em;
 }
 
 .down {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
+}
+
+.mobile-menu {
+  background-color: #0277bd;
+  color: white;
+  box-shadow: 1px -11px 20px -6px rgba(0, 0, 0, 0.49);
+  padding-left: 0px;
+  padding-right: 0px;
+  z-index: 1;
+  position: fixed;
+  border-top-left-radius: 0.3em;
+  border-top-right-radius: 0.3em;
+  left: 0;
+  bottom: 0;
+  font-family: Inter;
+  font-size: 0.8em;
 }
 
 .vitrine-container {
@@ -460,36 +453,64 @@ img.foto-center {
   z-index: 999 !important;
 }
 
-.menu-item-wrapper {
-  cursor: pointer;
+.nav-links {
+  position: relative;
 }
-.menu-item-wrapper:hover {
+
+.nav-links a {
+  color: white;
+}
+.nav-links a:hover {
   background-color: white;
+  color: #0277bd;
 }
-.menu-item-wrapper:hover span {
-  color: #01579b;
+.nav-links a:not(:hover) {
+  color: white;
 }
-.menu-item-wrapper:active {
-  background-color: white;
-}
-.menu-item-wrapper:active span {
-  color: #01579b;
-}
-.menu-item-wrapper:hover .arrow {
+.nav-links a:hover .arrow {
   border: solid #01579b;
   border-width: 0 0.2em 0.2em 0;
   display: inline-block;
   padding: 0.2em;
   margin-bottom: 0.1em;
-  margin-left: 0.8em;
+  margin-left: 0.3em;
 }
-.menu-item-wrapper:active .arrow {
+.nav-links a:active .arrow {
   border: solid #01579b;
   border-width: 0 0.2em 0.2em 0;
   display: inline-block;
   padding: 0.2em;
   margin-bottom: 0.1em;
-  margin-left: 0.8em;
+  margin-left: 0.3em;
+}
+
+.nav-link {
+  font-family: "Inter";
+  font-size: 0.75em !important;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: var(--white);
+}
+
+.dropdown-menu {
+  position: absolute !important;
+  border: none !important;
+  border-top: 1px solid white !important;
+  border-radius: 0 !important;
+  top: 100% !important;
+  transform: none !important;
+  background-color: #0277bd !important;
+  font-family: "Inter";
+  font-size: 0.9em !important;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  width: 100%;
 }
 
 .image-slider-noticias img {
